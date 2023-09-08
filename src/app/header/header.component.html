@@ -1,0 +1,53 @@
+<div class="container">
+    <div class="mobile-header">
+        <div class="menu" (click)="openMenuFunction()">
+            <mat-icon>menu</mat-icon>
+        </div>
+        <div class="logo">
+            <img alt="logo" src="assets/images/logo.png">
+        </div>  
+    </div>
+    <div *ngIf="openMenu==true" class="mobile-menu">
+        <app-menu-mobile></app-menu-mobile>   
+    </div>
+    <div class="pages">
+        <div class="logo">
+            <img alt="logo" src="assets/images/logo.png">
+        </div>
+        <div class="green">Mettre une annonce <mat-icon>add_box</mat-icon></div>
+        <div class="search">
+            <input id="search-input" placeholder=" Rechercher sur LaRecupe" />
+            <div class="boutton">
+                <mat-icon>search</mat-icon>
+            </div>
+        </div>
+        <span>
+            <h3>
+                <mat-icon>replay</mat-icon>
+            </h3>
+
+            <h3>
+                Mes recherches
+            </h3> 
+        </span>
+        <span>
+            <h3>
+                <mat-icon> chat</mat-icon>
+            </h3>
+
+            <h3>
+                Messages
+            </h3> 
+        </span>
+        <span>
+            <h3>
+                <mat-icon>account_circle</mat-icon>
+            </h3>
+
+            <h3>
+                Se connecter
+            </h3> 
+        </span>
+    </div>
+
+</div>

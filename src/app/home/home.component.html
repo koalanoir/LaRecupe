@@ -1,0 +1,39 @@
+<body>
+    <app-header></app-header>
+    <div class="container">
+        <div class="acceuil">
+            <h4>
+            Faites vous plaisir et trouvez votre bonheur parmis toutes les annonces
+            </h4>
+            <span class="green"><p>Mettre une annonce<mat-icon>add_box</mat-icon></p> </span>
+        </div>
+        <h2>Top Categories</h2>
+        <div class="categories-container">
+            
+            <div class="categories">
+                <mat-card class="card-with-background">
+                    <div class="card-background-image" [style.background-image]="'url(' + currentImageImmo + ')'"></div>
+                    <mat-card-content>
+                      <h4>Immobilier</h4>
+                    </mat-card-content>
+                </mat-card>
+                <mat-card class="card-with-background">
+                    <div class="card-background-image" [style.background-image]="'url(' + currentImageVehicule + ')'" ></div>
+                    <mat-card-content>
+                      <h4>Vehicules</h4>
+                    </mat-card-content>
+                </mat-card>
+                <mat-card class="card-with-background">
+                    <div class="card-background-image" [style.background-image]="'url(' + currentImageAmeublement + ')'" ></div>
+                    <mat-card-content>
+                      <h4>Ammeublement</h4>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+        </div>
+        <h2>Dernières annonces</h2>
+    </div>
+</body>
+<div class="footer">
+    <app-footer></app-footer>
+</div>

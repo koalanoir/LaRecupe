@@ -1,0 +1,105 @@
+.container {
+    display: flex;
+    margin: 1.6rem;
+    flex-direction: column;
+}
+.footer {
+    font-family: monospace;
+    font-size: 14px;
+    color: white;
+    background-color: rgb(40, 35, 35);
+}
+
+body{
+    font-family: monospace;
+    background-color: rgb(240, 239, 231);
+    height: 100vh
+}
+.categories-container {
+    overflow-x:auto; /* Active la barre de défilement horizontale si nécessaire */
+    margin-bottom: 5px;
+  }
+  
+  .categories {
+    display: flex; /* Permet aux éléments internes de défiler horizontalement */
+    justify-content: space-around;
+    width: 95vw;
+    
+  }
+
+.card-with-background:hover{
+    box-shadow: 10px 10px 16px 4px #555;
+}
+
+.card-with-background {
+    box-shadow: 1px 1px 12px #555;
+    margin-right: 1rem;
+    width: 300px; /* Ajustez la largeur selon vos besoins */
+    height: 250px; /* Ajustez la hauteur selon vos besoins */
+    font-size:bolder;
+    position: relative;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius:5px;
+}
+/* Style pour l'image en arrière-plan */
+.card-background-image {
+  background-size: cover; /* Ajustez le redimensionnement de l'image */
+  background-position: center; /* Ajustez la position de l'image */
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius:5px;
+  top: 0;
+  left: 0;
+  opacity: 0.4;
+}
+.green{
+    justify-content: center;
+    
+    width: 90vw;
+    
+    >p{
+        background-color: #FFE53B;
+        height: 100px;
+        background-image: linear-gradient(147deg, #FFE53B 0%, #FF2525 74%);                
+        border-radius:4px;
+        border:transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        >mat-icon{
+            margin-left: 3px
+        } 
+    }
+}
+.acceuil{
+    text-align: center;
+}
+/* Styles spécifiques aux écrans mobiles (largeur < 768px) */
+@media (max-width: 970px) {
+    .card-with-background {
+      width: 100px; /* Ajustez la largeur selon vos besoins */
+      height: 100px; /* Ajustez la hauteur selon vos besoins */
+    }
+    body{
+        overflow-x: hidden;
+    }
+    .green{
+        >p{
+            height: 40px;
+        }
+        
+    }
+    .footer{
+        font-size: 11px;
+    }
+    .categories {
+        width: 140vw;
+        
+      }
+      
+}

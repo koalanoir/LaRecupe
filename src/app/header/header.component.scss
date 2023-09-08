@@ -1,0 +1,141 @@
+
+.container{
+    display: flex;
+    margin-top: 1em;
+    flex-direction: column;
+    >.mobile-header{
+        display:none
+    }
+    justify-content: space-around;
+
+}
+.logo{
+    
+    >img{
+        
+        width: 150px;
+        height: 40px;
+    }
+}
+.search{
+    display: flex;
+    margin: 5px;
+    justify-content: center;
+    align-items: center;
+    
+    >input{
+        align-items: center;
+        text-align: center;
+        color:rgb(0, 0, 0);
+        background-color: #d4ced0;
+        border: none;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        width: 50vw;
+        height: 7vh;
+    }
+    .boutton {
+        
+        background-color: #d4ced0;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        width: 7vw;
+        display: flex;
+        justify-content:center;
+        align-items:center;
+
+        height: 7vh;
+        >mat-icon{
+            box-shadow: 1px 1px 12px #555;
+            display: flex;
+            width: 5vw;
+            text-align: center;
+            height: 5vh;
+            background-color: #ff5900;  
+            justify-content: center;
+            border: none;
+            border-radius: 5px;
+
+            align-items: center;
+            font-size: 25px;
+        }
+    }
+
+}
+.pages{
+    display: flex;
+    
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+    >span{
+        margin-top: 17px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        >h3{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: lighter;
+            height: 1.5vh;
+            >mat-icon{
+                
+                font-size: 25px;
+            }
+            font-size: 12px;
+        }
+    }
+    >.green{
+        background-color: #FFE53B;
+        background-image: linear-gradient(147deg, #FFE53B 0%, #FF2525 74%);   
+        color: black;
+        width: 200px;
+        font-size: 14px;
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        border-radius: 10px;
+        height: 50px;
+    }
+}
+
+
+/* Styles spécifiques aux écrans mobiles (largeur < 768px) */
+@media (max-width: 970px) {
+    .logo{
+        >img{
+            width: 100px;
+            height: 30px;
+        }
+    }
+  .container {
+    font-size: 12px; /* Exemple de style pour le texte */
+    >.mobile-header{
+        display: flex;
+        align-items:center;
+        text-align:center;
+        >.menu{
+            
+
+            >mat-icon{
+                font-size: 27px;
+            }
+            
+            width: 70px;
+        }
+        >.logo{
+            margin-left: 5%;
+        }
+      }
+  }
+  .pages{
+    display:none
+  }
+
+
+}

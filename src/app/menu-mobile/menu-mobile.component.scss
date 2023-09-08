@@ -1,0 +1,12 @@
+.item{
+    display:flex;
+    justify-content :flex-start;
+    align-items: center;
+    margin: 2em;
+    >mat-icon{
+        margin-right: 2px;
+    }
+}
+h3{
+    margin: 1em;
+}

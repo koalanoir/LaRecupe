@@ -1,0 +1,16 @@
+.items{
+    display: flex;
+    justify-content: space-around;
+    height: 100px;
+    flex-direction: row;
+    margin: 1rem;
+    align-items: center;
+    >.item{
+        text-align: center;
+    }
+}
+p{
+    height: 60px;
+    text-align: center;
+    align-items: center;
+}
