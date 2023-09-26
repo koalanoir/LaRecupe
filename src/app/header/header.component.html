@@ -41,12 +41,18 @@
         </span>
         <span>
             <h3>
-                <mat-icon>account_circle</mat-icon>
+                <img *ngIf="photo!=''" (click)="auth.logout({ logoutParams: { returnTo: document.location.href } })" [src]="photo" alt="Photo de profil">
+                <mat-icon *ngIf="photo==''" (click)="auth.loginWithRedirect()">account_circle</mat-icon>
             </h3>
-
-            <a (click)="auth.loginWithRedirect()">
-                Se connecter
-            </a> 
+            <ng-container *ngIf="auth.isAuthenticated$ | async; else loggedOut">
+                <label class="log" (click)="auth.logout({ logoutParams: { returnTo: document.location.href } })">
+                  Se deconnnecter
+                </label>
+              </ng-container>
+          
+              <ng-template #loggedOut>
+                <label class="log"  (click)="auth.loginWithRedirect()">Se connecter</label>
+              </ng-template>
         </span>
     </div>
 

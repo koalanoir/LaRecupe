@@ -20,6 +20,10 @@ a{
         height: 40px;
     }
 }
+.log{
+    color: white;
+    font-size: 11px;
+}
 .search{
     display: flex;
     margin: 5px;
@@ -84,6 +88,10 @@ a{
             justify-content: center;
             font-weight: lighter;
             height: 1.5vh;
+            img{
+                border-radius: 30px;
+                width: 30px;
+            }
             >mat-icon{
                 color: white;
                 font-size: 30px;
