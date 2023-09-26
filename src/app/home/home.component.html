@@ -5,7 +5,7 @@
             <h4>
             Faites vous plaisir et trouvez votre bonheur parmis toutes les annonces
             </h4>
-            <span class="green"><p>Mettre une annonce<mat-icon>add_box</mat-icon></p> </span>
+            <span class="green" [routerLink]="['/vendre']"><p>Mettre une annonce<mat-icon>add_box</mat-icon></p> </span>
         </div>
         <h2>Top Categories</h2>
         <div class="categories-container">
@@ -31,9 +31,9 @@
                 </mat-card>
             </div>
         </div>
-        <h2>Dernières annonces</h2>
+        <h2 *ngIf="list_annonce_vide!=true">Dernières annonces</h2>
+    </div>
+    <div class="footer">
+        <app-footer></app-footer>
     </div>
 </body>
-<div class="footer">
-    <app-footer></app-footer>
-</div>

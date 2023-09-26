@@ -25,6 +25,9 @@ export class HomeComponent implements OnInit {
   currentImageImmo:string ='assets/images/cabane.jpg';
   currentImageVehicule:string ='assets/images/voiture-interieur.jpg';
   currentImageAmeublement:string ='assets/images/meuble-table.jpg';
+
+
+  list_annonce_vide: boolean=true;
   constructor() { }
 
   ngOnInit(): void {

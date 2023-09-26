@@ -9,21 +9,32 @@ import { HomeComponent } from './home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MenuMobileComponent } from './menu-mobile/menu-mobile.component';
 import { FooterComponent } from './footer/footer.component';
-
+import { VendreComponent } from './vendre/vendre.component';
+// Import the module from the SDK
+import { AuthModule } from '@auth0/auth0-angular';
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     HomeComponent,
     MenuMobileComponent,
-    FooterComponent
+    FooterComponent,
+    VendreComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatIconModule,
-    MatCardModule
+    MatCardModule,
+    // Import the module into the application, with configuration
+    AuthModule.forRoot({
+      domain: 'dev-cjxhb-x9.eu.auth0.com',
+      clientId: 'KOjEvPTWuI6TuZIQCuRCwTfxWYNwwWLw',
+      authorizationParams: {
+        redirect_uri: window.location.origin
+      }
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]

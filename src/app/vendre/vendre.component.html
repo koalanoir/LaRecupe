@@ -1,0 +1,71 @@
+<body>
+    <app-header></app-header>
+    <div class="vendre">
+        <div class="text">
+            Dites nous tout!
+        </div>
+        <div class="formulaire">
+            <div class="slide">
+                <span class="label">
+                    Titre de l'annonce
+                </span>
+                <span class="input-label">
+                    <input [value]="titre"/>
+                </span>
+            </div>
+            <div class="slide" *ngIf="stage_categorie==true">
+                <span class="label">
+                    Catégorie
+                </span>
+                <span class="input-label">
+                    <select [value]="categorie">
+                        <option>Immobilier</option>
+                        <option>Vehicules</option>
+                        <option>Services</option>
+                        <option>Ammeublement</option>
+                    </select>
+                </span>
+            </div>
+            <div class="slide" *ngIf="stage_description==true">
+                <span class="label">
+                    Etat
+                </span>
+                <span class="input-label">
+                    <select [value]="etat">
+                        <option>Neuf</option>
+                        <option>Très bon état</option>
+                        <option>Bon état</option>
+                        <option>Mauvais état</option>
+                    </select>
+                </span>
+            </div>
+            <div class="slide" *ngIf="stage_description==true">
+                <span>
+                    Description
+                </span>
+                <span class="input-label">
+                    <textarea class="description" [value]="description"></textarea>
+                </span>
+            </div>
+            <div class="slide" *ngIf="stage_prix==true">
+                <span class="label">
+                    Prix
+                </span>
+                <span class="prix">
+                    <input [value]="prix"/>€
+                </span>
+            </div>
+            <div class="slide-cursor">
+                <span class="cursor prev" *ngIf="flag_prev==true">
+                    Précedent
+                </span>
+                <span class="cursor next" (click)="continuer()">
+                    Suivant
+                </span>
+            </div>
+        </div>
+    </div>
+</body>
+<div class="footer">
+    <app-footer></app-footer>
+</div>

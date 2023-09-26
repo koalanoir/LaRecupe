@@ -3,7 +3,7 @@
         <div class="menu" (click)="openMenuFunction()">
             <mat-icon>menu</mat-icon>
         </div>
-        <div class="logo">
+        <div class="logo" [routerLink]="['']">
             <img alt="logo" src="assets/images/logo.png">
         </div>  
     </div>
@@ -11,10 +11,10 @@
         <app-menu-mobile></app-menu-mobile>   
     </div>
     <div class="pages">
-        <div class="logo">
+        <div class="logo" [routerLink]="['']">
             <img alt="logo" src="assets/images/logo.png">
         </div>
-        <div class="green">Mettre une annonce <mat-icon>add_box</mat-icon></div>
+        <div class="green" [routerLink]="['/vendre']">Mettre une annonce <mat-icon>add_box</mat-icon></div>
         <div class="search">
             <input id="search-input" placeholder=" Rechercher sur LaRecupe" />
             <div class="boutton">
@@ -26,27 +26,27 @@
                 <mat-icon>replay</mat-icon>
             </h3>
 
-            <h3>
+            <a>
                 Mes recherches
-            </h3> 
+            </a> 
         </span>
         <span>
             <h3>
                 <mat-icon> chat</mat-icon>
             </h3>
 
-            <h3>
+            <a>
                 Messages
-            </h3> 
+            </a> 
         </span>
         <span>
             <h3>
                 <mat-icon>account_circle</mat-icon>
             </h3>
 
-            <h3>
+            <a (click)="auth.loginWithRedirect()">
                 Se connecter
-            </h3> 
+            </a> 
         </span>
     </div>
 

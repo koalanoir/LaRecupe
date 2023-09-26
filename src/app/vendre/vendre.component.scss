@@ -1,0 +1,80 @@
+body{
+    height: 100vh;
+    overflow-x: hidden;
+}
+.footer {
+    color: white;
+    background-color: rgb(40, 35, 35);
+}
+.vendre{
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    align-items: center;
+    padding: 5rem;
+    .text{
+        font-size: 120%;
+    }
+    >.formulaire{
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 10px;
+        width: 70vw;
+        border-radius: 20px;
+        box-shadow: 3px 5px 10px 1px #555;
+        padding: 2em;
+        >.slide{
+            >span{
+                display: flex;
+                flex-direction: column;
+                >input, select{
+                    margin: 5px;
+                    border-radius: 10px;
+                    margin-top: 5px;
+                    display: flex;
+                    padding: 5px;
+                    border: 1px solid gray;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                    width: 20rem;
+                    height: 2rem;
+                }
+                .description{
+                    margin-top: 5px;
+                    border-radius: 10px;
+                    padding: 5px;
+                    height: 8rem;
+                    width: 20rem;
+                    max-height: 8rem;
+                    max-width: 20rem;
+                }
+            }
+            >.prix{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+            }
+        }
+        display: flex;
+        flex-direction: column;
+    }
+}
+.slide-cursor{
+    margin-top: 1rem;
+    .cursor{
+        border: 1px solid gray;
+        margin: 5px;
+        border-radius: 15px;
+        width: 5rem;
+        padding: 10px;
+        &.next{
+            color: white;
+            background: #5A3F37;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #2C7744, #5A3F37);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #2C7744, #5A3F37); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        }
+    }
+}

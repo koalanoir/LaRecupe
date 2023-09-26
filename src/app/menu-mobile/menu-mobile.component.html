@@ -1,5 +1,5 @@
 <div class="tab">
-    <div class="item">
+    <div class="item" [routerLink]="['/vendre']">
         <mat-icon>add_box</mat-icon>Mettre une annonce
     </div>
     <div class="item bar">
@@ -11,8 +11,16 @@
     <div class="item">
         <mat-icon>replay</mat-icon>Recherches sauvegardées
     </div>
-    <div class="item">
-        <mat-icon>account_circle</mat-icon>Se connecter
+    <div class="item" (click)="auth.loginWithRedirect()">
+        <mat-icon>account_circle</mat-icon>    <ng-container *ngIf="auth.isAuthenticated$ | async; else loggedOut">
+            <label (click)="auth.logout({ logoutParams: { returnTo: document.location.origin } })">
+              Se deconnnecter
+            </label>
+          </ng-container>
+      
+          <ng-template #loggedOut>
+            <button (click)="auth.loginWithRedirect()">Se connecter</button>
+          </ng-template>
     </div>
 </div>
 <div class="categories">

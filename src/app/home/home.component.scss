@@ -1,22 +1,22 @@
 .container {
     display: flex;
-    margin: 1.6rem;
+    margin: 1.6rem; 
     flex-direction: column;
 }
+
 .footer {
-    font-family: monospace;
-    font-size: 14px;
+
     color: white;
     background-color: rgb(40, 35, 35);
 }
-
 body{
-    font-family: monospace;
+    font-family: "SF Pro Text", "SF Pro Icons", "AOS Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 106.25%;
     background-color: rgb(240, 239, 231);
-    height: 100vh
+    
 }
 .categories-container {
-    overflow-x:auto; /* Active la barre de défilement horizontale si nécessaire */
+    overflow-x:auto;
     margin-bottom: 5px;
   }
   
@@ -24,7 +24,6 @@ body{
     display: flex; /* Permet aux éléments internes de défiler horizontalement */
     justify-content: space-around;
     width: 95vw;
-    
   }
 
 .card-with-background:hover{
@@ -58,14 +57,17 @@ body{
 }
 .green{
     justify-content: center;
-    
-    width: 90vw;
-    
+    align-items: center;
+    display: flex;
     >p{
-        background-color: #FFE53B;
-        height: 100px;
-        background-image: linear-gradient(147deg, #FFE53B 0%, #FF2525 74%);                
-        border-radius:4px;
+        background: #5A3F37;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #2C7744, #5A3F37);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #2C7744, #5A3F37); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        color: white;
+        font-weight: bolder;
+        height: 100px;        
+        width: 70vw;    
+        border-radius:20px;
         border:transparent;
         display: flex;
         align-items: center;
