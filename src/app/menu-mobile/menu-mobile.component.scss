@@ -3,15 +3,18 @@
     justify-content :flex-start;
     align-items: center;
     margin: 2em;
+    color: white;
     >img{
         border-radius: 30px;
         width: 28px;
         margin-right: 4px;
     }
     >mat-icon{
+        color: white;
         margin-right: 2px;
     }
 }
 h3{
+    color: white;
     margin: 1em;
 }

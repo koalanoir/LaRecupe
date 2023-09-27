@@ -38,7 +38,7 @@ body{
                     justify-content: center;
                     align-items: center;
                     text-align: center;
-                    width: 20rem;
+                    width: 100%;
                     height: 2rem;
                 }
                 .description{
@@ -46,9 +46,9 @@ body{
                     border-radius: 10px;
                     padding: 5px;
                     height: 8rem;
-                    width: 20rem;
+                    width: 20em;
                     max-height: 8rem;
-                    max-width: 20rem;
+                    max-width: 20em;
                 }
             }
             >.prix{

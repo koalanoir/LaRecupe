@@ -5,7 +5,7 @@
             Dites nous tout!
         </div>
         <div class="formulaire">
-            <div class="slide">
+            <div class="slide" *ngIf="stage_titre==true">
                 <span class="label">
                     Titre de l'annonce
                 </span>
@@ -26,7 +26,7 @@
                     </select>
                 </span>
             </div>
-            <div class="slide" *ngIf="stage_description==true">
+            <div class="slide" *ngIf="stage_categorie==true">
                 <span class="label">
                     Etat
                 </span>
@@ -56,7 +56,7 @@
                 </span>
             </div>
             <div class="slide-cursor">
-                <span class="cursor prev" *ngIf="flag_prev==true">
+                <span class="cursor prev" (click)="retour()" *ngIf="flag_prev==true">
                     Précedent
                 </span>
                 <span class="cursor next" (click)="continuer()">

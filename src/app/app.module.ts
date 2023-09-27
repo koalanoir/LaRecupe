@@ -12,6 +12,10 @@ import { FooterComponent } from './footer/footer.component';
 import { VendreComponent } from './vendre/vendre.component';
 // Import the module from the SDK
 import { AuthModule } from '@auth0/auth0-angular';
+import { MessagerieComponent } from './messagerie/messagerie.component';
+
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+import { RechercheComponent } from './recherche/recherche.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,13 +23,16 @@ import { AuthModule } from '@auth0/auth0-angular';
     HomeComponent,
     MenuMobileComponent,
     FooterComponent,
-    VendreComponent
+    VendreComponent,
+    MessagerieComponent,
+    RechercheComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatIconModule,
+    InfiniteScrollModule,
     MatCardModule,
     // Import the module into the application, with configuration
     AuthModule.forRoot({

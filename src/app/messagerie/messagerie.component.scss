@@ -1,0 +1,99 @@
+body{
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: row;
+    >.list-conversations{
+        >legend{
+            text-align: center;
+            padding: 5px;
+            border-bottom: 0.8px solid rgba($color: gray, $alpha: 0.6);
+        }
+        overflow-y: auto;
+        padding: 5px;
+        width: 30vw;
+        height: 80vh;
+        display: flex;
+        border-radius: 25px;
+        flex-direction: column;
+        >span{
+            padding: 10px;
+            flex-direction: row;
+            align-items: center;
+            display: flex;
+            >mat-icon{
+                align-items: center;
+                display: flex;
+                font-size: 38px;
+                margin-right: 10px;
+            }
+            &:hover{
+                border-radius: 15px;
+                border: 0.8px solid rgba($color: gray, $alpha: 0.6);
+                background-color: rgba($color: rgb(122, 117, 117), $alpha: 0.3);
+            }
+            >aside{
+                justify-content: center;
+                margin: 10px;
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+    >.conversation{
+        border-left: 0.8px solid rgba($color: gray, $alpha: 0.6);
+        display: flex;
+        padding: 5px;
+        
+        flex-direction: column;
+        overflow-y: hidden;
+        overflow-x: hidden;
+        overscroll-behavior: none;
+        .echange{
+            height: 80%;
+            overflow-y: auto;
+        }
+        .textarea{
+            padding: 20px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            >input{
+                padding: 5px;
+                width: 50vw;
+                border-radius: 20px;
+                height: 30px;
+                border: 1px solid gray;
+                
+            }
+            >button{
+                
+                border: 1px solid gray;
+                margin-left: 15px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 40px;
+                width: 40px;
+                >mat-icon{
+                    background-color: transparent;
+                }
+                border-radius: 25px;
+                &:hover{
+                    color: rgb(255, 255, 255);
+                    background-color: #000000;
+                }
+            }
+        }
+
+    }
+}
+/* Styles spécifiques aux écrans mobiles (largeur < 768px) */
+@media (max-width: 768px) {
+    .conversation{
+        display: none !important;
+    }
+    .list-conversations{
+        width: 100vw!important;
+    }
+}

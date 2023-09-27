@@ -1,9 +1,10 @@
 .container{
     background: #5A3F37;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #2C7744, #5A3F37);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #2C7744, #5A3F37); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: -webkit-linear-gradient(to right, #1e201f, #693f32);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #1e201f, #693f32);  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     padding: 1rem;
     display: flex;
+    box-shadow: 0px 15px 15px -15px #000000;
     flex-direction: column;
     >.mobile-header{
         display:none
@@ -22,7 +23,7 @@ a{
 }
 .log{
     color: white;
-    font-size: 11px;
+    font-size: 10px;
 }
 .search{
     display: flex;
@@ -80,7 +81,7 @@ a{
         text-align: center;
         justify-content: center;
         >a{
-            font-size: 11px;
+            font-size: 10px;
         }
         >h3{
             display: flex;
@@ -122,6 +123,7 @@ a{
         }
     }
   .container {
+    box-shadow: 0px 15px 15px -15px #000000;
     font-size: 12px; /* Exemple de style pour le texte */
     >.mobile-header{
         display: flex;
@@ -129,6 +131,7 @@ a{
         text-align:center;
         >.menu{
             >mat-icon{
+                color: white;
                 font-size: 27px;
             }
             width: 70px;
