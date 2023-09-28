@@ -10,6 +10,12 @@
     <div *ngIf="openMenu==true" class="mobile-menu">
         <app-menu-mobile></app-menu-mobile>   
     </div>
+    <div class="search mobil">
+        <input id="search-input" placeholder=" Rechercher sur LaRecupe" />
+        <div class="boutton" [routerLink]="['/recherche']">
+            <mat-icon>search</mat-icon>
+        </div>
+    </div>
     <div class="pages">
         <div class="logo" [routerLink]="['']">
             <img alt="logo" src="assets/images/logo.png">
@@ -17,11 +23,11 @@
         <div class="green" [routerLink]="['/vendre']">Mettre une annonce <mat-icon>add_box</mat-icon></div>
         <div class="search">
             <input id="search-input" placeholder=" Rechercher sur LaRecupe" />
-            <div class="boutton">
+            <div class="boutton" [routerLink]="['/recherche']">
                 <mat-icon>search</mat-icon>
             </div>
         </div>
-        <span>
+        <span *ngIf="auth.isAuthenticated$ | async">
             <h3>
                 <mat-icon>replay</mat-icon>
             </h3>
@@ -30,7 +36,7 @@
                 Mes recherches
             </a> 
         </span>
-        <span  [routerLink]="['/messagerie']">
+        <span *ngIf="auth.isAuthenticated$ | async" [routerLink]="['/messagerie']">
             <h3>
                 <mat-icon> chat</mat-icon>
             </h3>

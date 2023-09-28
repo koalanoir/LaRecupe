@@ -1,5 +1,14 @@
+app-header{
+    box-shadow: 0px 15px 15px -15px #000000;
+    position: fixed;
+    width: 101%;
+
+}
 body{
+    height: 100vh;
+    padding-top: 100PX;
     overflow-x: hidden;
+    overflow-y: hidden;
     display: flex;
     flex-direction: row;
     >.list-conversations{
@@ -34,6 +43,9 @@ body{
             >aside{
                 justify-content: center;
                 margin: 10px;
+                >label{
+                    font-weight: bold;
+                }
                 display: flex;
                 flex-direction: column;
             }
@@ -43,13 +55,13 @@ body{
         border-left: 0.8px solid rgba($color: gray, $alpha: 0.6);
         display: flex;
         padding: 5px;
-        
+        height: auto;
         flex-direction: column;
         overflow-y: hidden;
         overflow-x: hidden;
         overscroll-behavior: none;
         .echange{
-            height: 80%;
+            height: 70%;
             overflow-y: auto;
         }
         .textarea{
@@ -64,10 +76,8 @@ body{
                 border-radius: 20px;
                 height: 30px;
                 border: 1px solid gray;
-                
             }
             >button{
-                
                 border: 1px solid gray;
                 margin-left: 15px;
                 display: flex;
@@ -90,10 +100,16 @@ body{
 }
 /* Styles spécifiques aux écrans mobiles (largeur < 768px) */
 @media (max-width: 768px) {
+    body{
+        padding-top: 80px;
+    }
     .conversation{
         display: none !important;
     }
     .list-conversations{
         width: 100vw!important;
+    }
+    app-footer{
+        display: none !important;
     }
 }

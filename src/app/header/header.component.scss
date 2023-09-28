@@ -26,6 +26,9 @@ a{
     font-size: 10px;
 }
 .search{
+    &.mobil{
+        display: none;
+    }
     display: flex;
     margin: 5px;
     justify-content: center;
@@ -112,7 +115,9 @@ a{
         height: 50px;
     }
 }
-
+.mobil-search{
+    display: none;
+}
 
 /* Styles spécifiques aux écrans mobiles (largeur < 768px) */
 @media (max-width: 970px) {
@@ -122,7 +127,25 @@ a{
             height: 30px;
         }
     }
+    .mobil{
+        display: flex !important;
+        >input{
+            width: 80vw;
+            height: 3vh;
+        }
+        >.boutton {
+            height: 3vh;
+            background-color: #ff5900;
+            >mat-icon{
+                box-shadow: none;
+                height: auto;
+                background-color: transparent;
+                font-size: 28px;
+            }
+        }
+    }
   .container {
+    width: 100vw;
     box-shadow: 0px 15px 15px -15px #000000;
     font-size: 12px; /* Exemple de style pour le texte */
     >.mobile-header{
@@ -132,7 +155,7 @@ a{
         >.menu{
             >mat-icon{
                 color: white;
-                font-size: 27px;
+                font-size: 47px;
             }
             width: 70px;
         }

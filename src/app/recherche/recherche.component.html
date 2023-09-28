@@ -1,1 +1,103 @@
-<p>recherche works!</p>
+<div class="head">
+    <app-header></app-header>
+    <div class="filtre-head">
+        <div class="item larger-screen">
+            <button class="input"></button>
+            <label>Localisation</label>
+        </div>
+        <div class="item larger-screen">
+            <select [value]="categorie" class="categorie">
+                <option>Immobilier</option>
+                <option>Vehicules</option>
+                <option>Services</option>
+                <option>Ammeublement</option>
+            </select>
+            <label>Catégorie</label>
+        </div>
+        <div class="item">
+            
+            <div class="prix">
+                <input class="input" [value]="min" id="min" placeholder="min" type="number">
+                <input class="input" [value]="max" id="max" placeholder="max" type="number">
+            </div>
+            <label>Prix</label>
+        </div>
+        <div class="item">
+            
+            <select [value]="etat" class="etat">
+                <option>Neuf</option>
+                <option>Très bon état</option>
+                <option>Bon état</option>
+                <option>Mauvais état</option>
+            </select>
+            <label>Etat</label>
+        </div>
+        <div class="item mobil">
+            <button class="input"><mat-icon>settings_input_component</mat-icon></button>
+            <label>filtres</label>
+        </div>
+
+    </div>
+</div>
+<body>
+    <legend><h1>Annonces</h1></legend>
+    <div class="resulat">
+        <article>
+            <img  class="img" [src]="image" alt="photo du bien">
+            <aside>
+                <div class="identifiants">
+                    <label for="titre"><h2>Titre</h2></label>
+                    <label for="titre"><h2>Prix</h2></label>
+                </div>
+                <div class="details">
+                    <label for="titre">Catégorie</label>
+                    <label for="titre">Localisation</label>
+                    <label for="titre">Date</label>
+                </div>
+            </aside>
+        </article>
+        <article>
+            <img [src]="image" alt="photo du bien">
+            <aside>
+                <div class="identifiants">
+                    <label for="titre"><h2>Titre</h2></label>
+                    <label for="titre"><h2>Prix</h2></label>
+                </div>
+                <div class="details">
+                    <label for="titre">Catégorie</label>
+                    <label for="titre">Localisation</label>
+                    <label for="titre">Date</label>
+                </div>
+            </aside>
+        </article>
+        <article>
+            <img [src]="image" alt="photo du bien">
+            <aside>
+                <div class="identifiants">
+                    <label for="titre"><h2>Titre</h2></label>
+                    <label for="titre"><h2>Prix</h2></label>
+                </div>
+                <div class="details">
+                    <label for="titre">Catégorie</label>
+                    <label for="titre">Localisation</label>
+                    <label for="titre">Date</label>
+                </div>
+            </aside>
+        </article>
+        <article>
+            <img src="" alt="photo du bien">
+            <aside>
+                <div class="identifiants">
+                    <label for="titre"><h2>Titre</h2></label>
+                    <label for="titre"><h2>Prix</h2></label>
+                </div>
+                <div class="details">
+                    <label for="titre">Catégorie</label>
+                    <label for="titre">Localisation</label>
+                    <label for="titre">Date</label>
+                </div>
+            </aside>
+        </article>
+    </div>
+    <app-footer></app-footer>
+</body>
