@@ -1,7 +1,8 @@
 <div class="container">
     <div class="mobile-header">
         <div class="menu" (click)="openMenuFunction()">
-            <mat-icon>menu</mat-icon>
+            <mat-icon *ngIf="openMenu==false">menu</mat-icon>
+            <mat-icon *ngIf="openMenu==true">close</mat-icon>
         </div>
         <div class="logo" [routerLink]="['']">
             <img alt="logo" src="assets/images/logo.png">

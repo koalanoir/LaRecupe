@@ -127,6 +127,12 @@ a{
             height: 30px;
         }
     }
+    .search{
+        &.mobil{
+            margin: 0px;
+        }
+    }
+        
     .mobil{
         display: flex !important;
         >input{
@@ -157,10 +163,10 @@ a{
                 color: white;
                 font-size: 47px;
             }
-            width: 70px;
+            width: 30px;
         }
         >.logo{
-            margin-left: 5%;
+            margin-left:20px;
         }
       }
   }
