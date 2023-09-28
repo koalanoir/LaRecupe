@@ -28,7 +28,7 @@
                 <mat-icon>search</mat-icon>
             </div>
         </div>
-        <span *ngIf="auth.isAuthenticated$ | async">
+        <span>
             <h3>
                 <mat-icon>replay</mat-icon>
             </h3>
@@ -37,7 +37,7 @@
                 Mes recherches
             </a> 
         </span>
-        <span *ngIf="auth.isAuthenticated$ | async" [routerLink]="['/messagerie']">
+        <span [routerLink]="['/messagerie']">
             <h3>
                 <mat-icon> chat</mat-icon>
             </h3>

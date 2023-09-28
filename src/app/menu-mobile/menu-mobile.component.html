@@ -2,13 +2,13 @@
     <div class="item" [routerLink]="['/vendre']">
         <mat-icon>add_box</mat-icon>Mettre une annonce
     </div>
-    <div class="item bar" *ngIf="auth.isAuthenticated$ | async" [routerLink]="['/recherche']">
+    <div class="item bar" [routerLink]="['/recherche']">
         <mat-icon>search</mat-icon>Rechercher
     </div>
-    <div class="item" *ngIf="auth.isAuthenticated$ | async" [routerLink]="['/messagerie']">
+    <div class="item" [routerLink]="['/messagerie']">
         <mat-icon> chat</mat-icon>Messages
     </div>
-    <div *ngIf="auth.isAuthenticated$ | async" class="item">
+    <div class="item">
         <mat-icon>replay</mat-icon>Recherches sauvegardées
     </div>
     <div class="item">
