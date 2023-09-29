@@ -5,20 +5,20 @@
             Dites nous tout!
         </div>
         <div class="formulaire">
-            <div class="slide" *ngIf="stage_titre==true">
+            <div class="slide" *ngIf="stage_titre">
                 <span class="label">
                     Titre de l'annonce
                 </span>
                 <span class="input-label">
-                    <input [value]="titre"/>
+                    <input [(ngModel)]="titre"/>
                 </span>
             </div>
-            <div class="slide" *ngIf="stage_categorie==true">
+            <div class="slide" *ngIf="stage_categorie">
                 <span class="label">
                     Catégorie
                 </span>
                 <span class="input-label">
-                    <select [value]="categorie">
+                    <select [(ngModel)]="categorie">
                         <option>Immobilier</option>
                         <option>Vehicules</option>
                         <option>Services</option>
@@ -26,12 +26,12 @@
                     </select>
                 </span>
             </div>
-            <div class="slide" *ngIf="stage_categorie==true">
+            <div class="slide" *ngIf="stage_categorie">
                 <span class="label">
                     Etat
                 </span>
                 <span class="input-label">
-                    <select [value]="etat">
+                    <select [(ngModel)]="etat">
                         <option>Neuf</option>
                         <option>Très bon état</option>
                         <option>Bon état</option>
@@ -39,21 +39,47 @@
                     </select>
                 </span>
             </div>
-            <div class="slide" *ngIf="stage_description==true">
+            <div class="slide" *ngIf="stage_description">
                 <span>
                     Description
                 </span>
                 <span class="input-label">
-                    <textarea class="description" [value]="description"></textarea>
+                    <textarea class="description" [(ngModel)]="description"></textarea>
                 </span>
             </div>
-            <div class="slide" *ngIf="stage_prix==true">
+            <div class="slide" *ngIf="stage_prix">
                 <span class="label">
                     Prix
                 </span>
                 <span class="prix">
-                    <input [value]="prix"/>€
+                    <input [(ngModel)]="prix"/>€
                 </span>
+            </div>
+            <div class="slide image" *ngIf="stage_image">
+                <span>
+                    Ajouter une image
+                </span>
+                <span class="input-label">
+                    <input type="file" [(ngModel)]="selectedFile" (change)="onFileSelected($event)"/>
+                </span>
+            </div>
+            <div class="slide" *ngIf="stage_resume">
+                <span>
+                    Récapitulatif de l'annonce
+                </span>
+                <article>
+                    <img  class="img" [src]="imageUrl" alt="photo du bien">
+                    <aside>
+                        <label for="titre" class="identifiants">{{titre}}</label>
+                        <label for="prix" class="identifiants">{{prix}}</label>
+                  
+                        <label for="categorie" class="details">{{categorie}}</label>
+                        <label for="Localisation" class="details">Localisation</label>
+                        <label for="date" class="details">{{dateDuJour}}</label>
+
+                        <label for="date" class="details"><label class="identifiants"><b>Description : </b></label>{{description}}</label>
+                    </aside>
+                </article>
             </div>
             <div class="slide-cursor">
                 <span class="cursor prev" (click)="retour()" *ngIf="flag_prev==true">

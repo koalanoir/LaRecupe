@@ -8,16 +8,20 @@ import { HttpClient } from '@angular/common/http';
 })
 export class MessagerieComponent implements OnInit {
   conversations: any[] = [
-    
+    "chaise à vendre","chat volé","canard boiteux","ali baba","ayoub et julien en solde"
   ];
   offset = 0;
   limit = 10; // Nombre de conversations à charger à chaque fois
-
-  messagerieService!: MessagerieService;
-
+  annonce:string=""
+  messagerieService!: MessagerieService
+  nonClicked:boolean=true
   constructor() { }
 
   ngOnInit(): void {
+  }
+  viewEchange(conversation:string):void{
+    this.annonce=conversation
+    this.nonClicked=false
   }
   loadConversations() {
     try{

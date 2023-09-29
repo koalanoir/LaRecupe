@@ -13,7 +13,7 @@ import { VendreComponent } from './vendre/vendre.component';
 // Import the module from the SDK
 import { AuthModule } from '@auth0/auth0-angular';
 import { MessagerieComponent } from './messagerie/messagerie.component';
-
+import { FormsModule } from '@angular/forms'; // Importez FormsModule
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { RechercheComponent } from './recherche/recherche.component';
 @NgModule({
@@ -34,6 +34,7 @@ import { RechercheComponent } from './recherche/recherche.component';
     MatIconModule,
     InfiniteScrollModule,
     MatCardModule,
+    FormsModule,
     // Import the module into the application, with configuration
     AuthModule.forRoot({
       domain: 'dev-cjxhb-x9.eu.auth0.com',

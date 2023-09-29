@@ -31,7 +31,55 @@
                 </mat-card>
             </div>
         </div>
-        <h2 *ngIf="list_annonce_vide!=true">Dernières annonces</h2>
+        <h2 *ngIf="list_annonce_vide==true">Dernières annonces</h2>
+       
+        <div class="resulat">
+            <article>
+                <img  class="img" [src]="imagesImmobilier[1]" alt="photo du bien">
+                <aside>
+                    <label for="titre" class="identifiants">Titre</label>
+                    <label for="titre" class="identifiants">Prix</label>
+              
+                    <label for="titre" class="details">Catégorie</label>
+                    <label for="titre" class="details">Localisation</label>
+                    <label for="titre" class="details">Date</label>
+                </aside>
+            </article>
+            <article>
+                <img [src]="imagesAmeublement[2]" alt="photo du bien">
+                <aside>
+                    <label for="titre" class="identifiants">Titre</label>
+                    <label for="titre" class="identifiants">Prix</label>
+              
+                    <label for="titre" class="details">Catégorie</label>
+                    <label for="titre" class="details">Localisation</label>
+                    <label for="titre" class="details">Date</label>
+                </aside>
+            </article>
+            <article>
+                <img [src]="imagesVehicule[1]" alt="photo du bien">
+                <aside>
+                        <label for="titre" class="identifiants">Titre</label>
+                        <label for="titre" class="identifiants">Prix</label>
+                  
+                        <label for="titre" class="details">Catégorie</label>
+                        <label for="titre" class="details">Localisation</label>
+                        <label for="titre" class="details">Date</label>
+                </aside>
+            </article>
+            <article>
+                <img src="" alt="photo du bien">
+                <aside>
+                    <label for="titre" class="identifiants">Titre</label>
+                    <label for="titre" class="identifiants">Prix</label>
+              
+                    <label for="titre" class="details">Catégorie</label>
+                    <label for="titre" class="details">Localisation</label>
+                    <label for="titre" class="details">Date</label>
+                </aside>
+            </article>
+        </div>
+    
     </div>
     <div class="footer">
         <app-footer></app-footer>

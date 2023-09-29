@@ -81,6 +81,35 @@ body{
 .acceuil{
     text-align: center;
 }
+
+article{
+    background-color: rgba(205, 135, 5, 0.02);
+    border-radius: 10px;
+    margin: 10px;
+    border: 1px solid gray;
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    >img{
+        width: 300px;
+        height: 200px;
+    }
+    >aside{
+        margin-left: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        >.identifiants{
+            font-size: 13px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        >.details{
+            font-size: 11px;
+        }
+    }
+}
 /* Styles spécifiques aux écrans mobiles (largeur < 768px) */
 @media (max-width: 970px) {
     .card-with-background {
@@ -89,13 +118,22 @@ body{
     }
     body{
         overflow-x: hidden;
-
     }
     .green{
         >p{
             height: 40px;
         }
-        
+    }
+    article{
+        border: none;
+        flex-direction: column;
+        justify-content: space-around;
+        >img{
+            border-radius: 10px;
+            width: 100%;
+            height: 200px;
+            display: block;
+        }
     }
     .footer{
         font-size: 11px;

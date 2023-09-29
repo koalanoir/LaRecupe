@@ -1,79 +1,50 @@
 <app-header></app-header>
 
-<body>
+<div class="full">
     <div class="list-conversations">
             <!-- Afficher les conversations ici -->
             <legend><h2>Vos conversations</h2></legend>
-            <span *ngFor="let conversation of conversations">{{ conversation }}</span>
-            <span>
+            <span *ngFor="let conversation of conversations" (click)="viewEchange(conversation)">
+                
                 <mat-icon>account_circle</mat-icon>
                 <aside>
                     <label>user name</label>
+                    <legend>{{ conversation }}</legend>
                     <legend>envoyer il y a 1h</legend>
                 </aside>
-        </span>
-        <span>
-                <mat-icon>account_circle</mat-icon>
-                <aside>
-                    <label>user name</label>
-                    <legend>envoyer il y a 1h</legend>
-                </aside>
-        </span>
-        <span>
-                <mat-icon>account_circle</mat-icon>
-                <aside>
-                    <label>user name</label>
-                    <legend>envoyer il y a 1h</legend>
-                </aside>
-        </span>
-            <span>
-                <mat-icon>account_circle</mat-icon>
-                <aside>
-                    <label>user name</label>
-                    <legend>envoyer il y a 1h</legend>
-                </aside>
-        </span>
-        <span>
-                <mat-icon>account_circle</mat-icon>
-                <aside>
-                    <label>user name</label>
-                    <legend>envoyer il y a 1h</legend>
-                </aside>
-        </span>
-        <span>
-                <mat-icon>account_circle</mat-icon>
-                <aside>
-                    <label>user name</label>
-                    <legend>envoyer il y a 1h</legend>
-                </aside>
-        </span>
-            <span>
-                    <mat-icon>account_circle</mat-icon>
-                    <aside>
-                        <label>user name</label>
-                        <legend>envoyer il y a 1h</legend>
-                    </aside>
-            </span>
-            <span>
-                    <mat-icon>account_circle</mat-icon>
-                    <aside>
-                        <label>user name</label>
-                        <legend>envoyer il y a 1h</legend>
-                    </aside>
-            </span>
-            <span>
-                    <mat-icon>account_circle</mat-icon>
-                    <aside>
-                        <label>user name</label>
-                        <legend>envoyer il y a 1h</legend>
-                    </aside>
             </span>
     </div>
-    <div class="conversation">
+    <div *ngIf="!nonClicked" class="conversation">
+        <label for="annonce"><h1>{{annonce}}</h1></label>
         <div class="echange"></div>
         <div class="textarea">
+            
             <input type="text">
             <button type="submit"><mat-icon>send</mat-icon></button>
         </div>
     </div>
-</body>
+</div>
+<div class="mobil">
+    <div *ngIf="nonClicked" class="list-conversations">
+            <!-- Afficher les conversations ici -->
+            <legend><h2>Vos conversations</h2></legend>
+            <span *ngFor="let conversation of conversations" (click)="viewEchange(conversation)">
+                
+                <mat-icon>account_circle</mat-icon>
+                <aside>
+                    <label>user name</label>
+                    <legend>{{ conversation }}</legend>
+                    <legend>envoyer il y a 1h</legend>
+                </aside>
+            </span>
+    </div>
+    <div *ngIf="!nonClicked" class="conversation">
+        <label for="annonce"><h1>{{annonce}}</h1></label>
+        <div class="echange"></div>
+        <div class="textarea">
+            
+            <input type="text">
+            <button type="submit"><mat-icon>send</mat-icon></button>
+        </div>
+    </div>
+</div>
