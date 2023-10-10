@@ -23,7 +23,7 @@ export class HeaderComponent implements OnInit {
       this.photo = photoUrl;
     });
   }
-
+  
   openMenuFunction(): void {
     if (this.openMenu!=true) {
       this.openMenu = true;
